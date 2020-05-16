@@ -1,0 +1,11 @@
+#navigator-container {
+  display: flex;
+  height: 100%;
+  
+  mat-sidenav-container {
+    width: 100%;
+    height: auto;
+  
+    mat-sidenav {width: 310px;}
+  }
+}

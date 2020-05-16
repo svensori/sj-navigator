@@ -1,0 +1,10 @@
+<ul class="main-routes">
+  <li *ngFor="let route of (routes | async); index as i"
+    [routerLink]="route.path"
+    routerLinkActive="active"
+    navigatorParentItem
+    [routeIndex]="i" 
+    (navigated)="navigate($event)">
+    {{route.name}}
+  </li>
+</ul>

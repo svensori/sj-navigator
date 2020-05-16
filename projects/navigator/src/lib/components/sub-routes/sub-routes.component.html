@@ -1,0 +1,10 @@
+<ul class="sub-routes">
+  <li *ngFor="let childRoute of (childRoutes | async); index as i"
+    [routerLink]="childRoute.path"
+    routerLinkActive="active"
+    navigatorChildItem 
+    [childRouteIndex]="i" 
+    (navigated)="navigate($event)">
+    {{childRoute.name}}
+  </li>
+</ul>

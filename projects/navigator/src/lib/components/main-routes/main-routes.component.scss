@@ -1,0 +1,36 @@
+:host {
+  background-color: transparent;
+  border-right: solid 1px #DEDEDE;
+}
+
+.list-size {
+  height: auto;
+  width: auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+ul.main-routes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+
+  li {
+    @extend .list-size;
+    letter-spacing: 1px;
+    padding: 20px 40px;
+    cursor: pointer;
+    border-bottom: solid #D3D3D3 1px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    &.active {
+      background-color: grey;
+      color: #FFF;
+      outline: none;
+    }
+    &:hover {background-color: lightblue;}
+  }
+}

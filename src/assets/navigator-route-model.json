@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Dashboard",
+    "path": "dashboard",
+    "children": [{
+        "name": "Releases",
+        "path": "dashboard/releases"
+      }
+    ]
+  },
+  {
+    "name": "Components",
+    "path": "components",
+    "children": [
+      {
+        "name": "Sample Component A",
+        "path": "components/a"
+      },
+      {
+        "name": "Sample Component B",
+        "path": "components/b"
+      },
+      {
+        "name": "Sample Component c",
+        "path": "components/c"
+      }
+    ]
+  },
+  {
+    "name": "Profile",
+    "path": "profile"
+  },
+  {
+    "name": "Settings",
+    "path": "settings",
+    "children": [
+      {
+        "name": "Account settings",
+        "path": "settings/account"
+      },
+      {
+        "name": "Privacy settings",
+        "path": "settings/privacy"
+      }
+    ]
+  }
+]

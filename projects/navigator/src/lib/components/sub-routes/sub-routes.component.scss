@@ -1,0 +1,27 @@
+.list-size {
+  height: auto;
+  width: auto;
+  font-size: 14px;
+}
+
+ul.sub-routes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    @extend .list-size;
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 20px 40px;
+    border-bottom: solid 1px #DEDEDE;
+    &:hover {background-color: lightgoldenrodyellow;}
+    &.active {
+      border-left: solid 4px green;
+      background-color: #DEDEDE;
+    }
+  }
+}
