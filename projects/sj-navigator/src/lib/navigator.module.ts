@@ -31,8 +31,6 @@ import { NavigatorService } from './navigator.service';
     BrowserAnimationsModule,
     NavigatorComponent
   ],
-  providers: [
-    NavigatorService
-  ]
+  providers: [NavigatorService]
 })
 export class NavigatorModule { }

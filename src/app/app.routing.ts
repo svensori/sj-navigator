@@ -12,7 +12,7 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       {
-        path: 'releases',
+        path: 'releases/:id',
         component: ReleasesComponent
       }
     ]

@@ -4,7 +4,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { NavigatorService } from './navigator.service';
 
 @Component({
-  selector: 'lib-navigator',
+  selector: 'sj-nav',
   templateUrl: './navigator.component.html',
   styleUrls: ['./navigator.component.scss']
 })

@@ -1,14 +1,28 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NavigatorModule } from '@sj/navigator';
+import { NavigatorModule, NavigatorService, RoutingModel } from 'sj-navigator';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
-import { SampleComponentComponent } from './sample-component/sample-component.component';
+import { ComponentsComponent } from './components/components.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReleasesComponent } from './releases/releases.component';
-import { ComponentsComponent } from './components/components.component';
+import { SampleComponentComponent } from './sample-component/sample-component.component';
+
+const routingModel: RoutingModel = [
+  {
+    name: 'Dashboard',
+    path: 'dashboard',
+    children: [{
+        name: 'Releases',
+        path: 'dashboard/releases'
+      }
+    ]
+  }
+];
+
+const initializer = (navService: NavigatorService) => () => navService.init(routingModel);
 
 @NgModule({
    declarations: [
@@ -23,6 +37,16 @@ import { ComponentsComponent } from './components/components.component';
       NavigatorModule,
       AppRoutingModule,
       HttpClientModule
+   ],
+   providers: [
+     {
+       provide: APP_INITIALIZER,
+       useFactory: initializer,
+       deps: [
+         NavigatorService
+       ],
+       multi: true
+     }
    ],
    bootstrap: [
       AppComponent

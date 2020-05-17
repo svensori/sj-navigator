@@ -1,6 +1,8 @@
 {
-  "name": "@sj/navigator",
+  "name": "sj-navigator",
+  "description": "Ez side nav creation.",
   "version": "0.0.1",
+  "private": false,
   "peerDependencies": {
     "@angular/common": "^9.1.7",
     "@angular/core": "^9.1.7",

@@ -7,9 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "publish:sj-navigator": "ng build sj-navigator --prod && npm publish dist/sj-navigator"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~9.1.6",
     "@angular/cdk": "^9.2.3",
@@ -21,8 +22,8 @@
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
     "@angular/router": "~9.1.6",
-    "navigator": "file:navigator-0.0.1.tgz",
     "rxjs": "~6.5.4",
+    "sj-navigator": "file:sj-navigator-0.0.1.tgz",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

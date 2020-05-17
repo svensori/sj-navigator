@@ -1,6 +1,6 @@
 import { AfterViewInit, Directive, ElementRef, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 
-import { NavItem } from '../interface/nav-item';
+import { RoutingModel } from '../interface/nav-item';
 import { NavigatorService } from '../navigator.service';
 
 @Directive({
@@ -11,7 +11,7 @@ export class NavigatorParentItemDirective implements OnInit, AfterViewInit {
   @Input() routeIndex: number;
   @Output() navigated = new EventEmitter<string>();
 
-  private routes: NavItem[];
+  private routes: RoutingModel;
 
   @HostListener('mouseenter')
   onMouseEnter() {
