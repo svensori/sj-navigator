@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BehaviorSubject } from 'rxjs';
 
-import { RoutingModel } from './interface/nav-item';
+import { RoutingModel } from './interface/nav-iterface';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +18,8 @@ export class NavigatorService {
   }
 
   private _sideNav: MatSidenav;
-  private _routes = new BehaviorSubject<RoutingModel>(undefined);
-  private _childRoutes = new BehaviorSubject<RoutingModel>(undefined);
+  private _routes = new BehaviorSubject<RoutingModel>([]);
+  private _childRoutes = new BehaviorSubject<RoutingModel>([]);
 
   constructor() { }
 

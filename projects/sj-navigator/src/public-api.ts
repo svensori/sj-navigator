@@ -9,4 +9,4 @@ export * from './lib/navigator.module';
 /**
  * Interfaces
  */
-export * from './lib/interface/nav-item';
+export * from './lib/interface/nav-iterface';

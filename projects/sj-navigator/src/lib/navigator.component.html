@@ -2,16 +2,13 @@
   <sj-nav-main-routes (navigated)="navigate($event)"></sj-nav-main-routes>
   <mat-sidenav-container class="example-container">
     <mat-sidenav 
-      [mode]="'over'" 
-      (mouseenter)="childRoutes ? null : sideNav.close()" 
+      [mode]="mode" 
+      (mouseenter)="childRoutes ? sideNav.open() : sideNav.close();" 
       (mouseleave)="sideNav.close()">
       <sj-nav-sub-routes (navigated)="navigate($event)"></sj-nav-sub-routes>
     </mat-sidenav>
     <mat-sidenav-content>
-      <sj-nav-navigator-header (signOut)="signOutClicked()"></sj-nav-navigator-header>
-      <div class='main-content'>
-        <ng-content></ng-content>
-      </div>
+      <ng-content></ng-content>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

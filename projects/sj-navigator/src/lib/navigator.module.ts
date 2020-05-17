@@ -4,7 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
 import { MainRoutesComponent } from './components/main-routes/main-routes.component';
-import { NavigatorHeaderComponent } from './components/navigator-header/navigator-header.component';
 import { SubRoutesComponent } from './components/sub-routes/sub-routes.component';
 import { NavigatorChildItemDirective } from './directive/navigator-child-item.directive';
 import { NavigatorParentItemDirective } from './directive/navigator-parent-item.directive';
@@ -15,7 +14,6 @@ import { NavigatorService } from './navigator.service';
 @NgModule({
   declarations: [
     NavigatorComponent,
-    NavigatorHeaderComponent,
     MainRoutesComponent,
     SubRoutesComponent,
     NavigatorParentItemDirective,

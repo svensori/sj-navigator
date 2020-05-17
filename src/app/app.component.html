@@ -1,3 +1,11 @@
-<sj-nav (signOut)="signOutClicked()" (navigated)="navigate($event)">
-  <router-outlet></router-outlet>
+<sj-nav mode="over" (navigated)="navigate($event)">
+  <mat-toolbar>
+    <span id="sj-nav">
+      SJ Navigator
+    </span>
+    <button mat-stroked-button (click)="signOutClicked()">Sign Out</button>
+  </mat-toolbar>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
 </sj-nav>

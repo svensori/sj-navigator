@@ -4,7 +4,8 @@
     routerLinkActive="active"
     navigatorChildItem 
     [childRouteIndex]="i" 
-    (navigated)="navigate($event)">
+    (navigated)="navigate($event)"
+    matRipple>
     {{childRoute.name}}
   </li>
 </ul>

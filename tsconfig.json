@@ -16,7 +16,7 @@
       "dom"
     ],
     "paths": {
-      "@sj/navigator": ["projects/navigator/src/public-api"]
+      "sj-navigator": ["projects/sj-navigator/src/public-api"]
     }
   },
   "angularCompilerOptions": {

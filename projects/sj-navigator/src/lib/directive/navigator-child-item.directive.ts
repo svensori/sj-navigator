@@ -1,6 +1,6 @@
 import { Directive, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 
-import { RoutingModel } from '../interface/nav-item';
+import { RoutingModel } from '../interface/nav-iterface';
 import { NavigatorService } from '../navigator.service';
 
 @Directive({
@@ -12,6 +12,11 @@ export class NavigatorChildItemDirective implements OnInit {
   @Output() navigated = new EventEmitter<string>();
 
   private childRoutes: RoutingModel;
+
+  @HostListener('mouseenter')
+  onMouseEnter() {
+    this.navigatorService.open();
+  }
 
   @HostListener('click')
   onMouseClick() {
