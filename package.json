@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish:sj-navigator": "ng build sj-navigator --prod && npm publish dist/sj-navigator"
+    "build:library": "ng build sj-navigator",
+    "publish:library": "npm publish dist/sj-navigator"
   },
   "private": false,
   "dependencies": {
