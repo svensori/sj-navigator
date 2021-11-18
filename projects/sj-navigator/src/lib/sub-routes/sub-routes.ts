@@ -1,7 +1,28 @@
-import { Directive, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { Component, Directive, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { NavigatorService } from '../navigator-service';
+import { RoutingModel } from '../navigator-types';
 
-import { RoutingModel } from '../interface/nav-iterface';
-import { NavigatorService } from '../navigator.service';
+@Component({
+  selector: 'sj-nav-sub-routes',
+  templateUrl: './sub-routes.html',
+  styleUrls: ['./sub-routes.scss']
+})
+export class SubRoutesComponent implements OnInit {
+
+  @Output() navigated = new EventEmitter<string>();
+
+  get childRoutes() {
+    return this.navigatorService.childRoutes;
+  }
+
+  constructor(private navigatorService: NavigatorService) { }
+
+  ngOnInit() { }
+
+  navigate(route: string) {
+    this.navigated.emit(route);
+  }
+}
 
 @Directive({
   selector: '[navigatorChildItem]'
@@ -34,3 +55,4 @@ export class NavigatorChildItemDirective implements OnInit {
       });
   }
 }
+

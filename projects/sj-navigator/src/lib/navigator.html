@@ -1,9 +1,9 @@
 <div id="navigator-container">
   <sj-nav-main-routes (navigated)="navigate($event)"></sj-nav-main-routes>
   <mat-sidenav-container class="example-container">
-    <mat-sidenav 
-      [mode]="mode" 
-      (mouseenter)="childRoutes ? sideNav.open() : sideNav.close();" 
+    <mat-sidenav
+      [mode]="mode"
+      (mouseenter)="childRoutes ? sideNav.open() : sideNav.close();"
       (mouseleave)="sideNav.close()">
       <sj-nav-sub-routes (navigated)="navigate($event)"></sj-nav-sub-routes>
     </mat-sidenav>

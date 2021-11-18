@@ -1,13 +1,12 @@
 import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { MatDrawerMode, MatSidenav } from '@angular/material/sidenav';
-import { RoutingModel } from 'sj-navigator';
-
-import { NavigatorService } from './navigator.service';
+import { NavigatorService } from './navigator-service';
+import { RoutingModel } from './navigator-types';
 
 @Component({
   selector: 'sj-nav',
-  templateUrl: './navigator.component.html',
-  styleUrls: ['./navigator.component.scss']
+  templateUrl: './navigator.html',
+  styleUrls: ['./navigator.scss']
 })
 export class NavigatorComponent implements OnInit, AfterViewInit {
   @Input() mode: MatDrawerMode;
@@ -38,3 +37,4 @@ export class NavigatorComponent implements OnInit, AfterViewInit {
     console.log(!!this.childRoutes);
   }
 }
+

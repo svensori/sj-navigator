@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BehaviorSubject } from 'rxjs';
-
-import { RoutingModel } from './interface/nav-iterface';
+import { RoutingModel } from './navigator-types';
 
 @Injectable({
   providedIn: 'root'
