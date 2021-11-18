@@ -49,13 +49,18 @@ const initializer = (navService: NavigatorService) => () => navService.init(rout
 ```
 5. Wrap your app in the sj-navigator selector.
 ```html
-<sj-nav (signOut)="signOutClicked()" (navigated)="navigate($event)">
+<sj-nav (navigated)="navigate($event)">
   <router-outlet></router-outlet>
 </sj-nav>
 ```
 Voila!, you have made an instant side navigation in your application.
 
+<br />
+
+## Have a different style to the navigation?
+You can style the navigation your global css file.
+
+<br/>
+
 ## Navigator emitters
-Sj navigator currently have two emitters. 
-1. signOut: Emits when sign out button was clicked.
-2. navigated: Returns the route path for the respective navigation item that is clicked. 
+* navigated - Returns the route path for the respective navigation item that is clicked. 
