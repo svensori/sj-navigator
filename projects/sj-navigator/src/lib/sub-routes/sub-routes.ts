@@ -36,14 +36,14 @@ export class NavigatorChildItemDirective implements OnInit {
 
   @HostListener('mouseenter')
   onMouseEnter() {
-    this.navigatorService.open();
+    this.navigatorService.getSideNavInstance().open();
   }
 
   @HostListener('click')
   onMouseClick() {
     const route = this.childRoutes[this.childRouteIndex].path;
     this.navigated.emit(route);
-    this.navigatorService.close();
+    this.navigatorService.getSideNavInstance().close();
   }
 
   constructor(private navigatorService: NavigatorService) { }

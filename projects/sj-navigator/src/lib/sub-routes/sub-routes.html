@@ -1,9 +1,9 @@
-<ul class="sub-routes">
+<ul class="ez-sub-nav">
   <li *ngFor="let childRoute of (childRoutes | async); index as i"
     [routerLink]="childRoute.path"
     routerLinkActive="active"
-    navigatorChildItem 
-    [childRouteIndex]="i" 
+    navigatorChildItem
+    [childRouteIndex]="i"
     (navigated)="navigate($event)"
     matRipple>
     {{childRoute.name}}
