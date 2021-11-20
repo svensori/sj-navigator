@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:library": "ng build sj-navigator",
-    "publish:library": "npm publish dist/sj-navigator"
+    "publish:library": "cd ./dist/sj-navigator && npm publish"
   },
   "private": false,
   "dependencies": {
