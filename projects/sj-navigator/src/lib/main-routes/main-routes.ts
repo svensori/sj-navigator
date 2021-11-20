@@ -35,18 +35,18 @@ export class NavigatorParentItemDirective implements OnInit, AfterViewInit {
   onMouseEnter() {
     const childRoutes = this.routes[this.routeIndex]?.children;
     this.navigatorService.setChildRoutes(childRoutes);
-    childRoutes ? this.navigatorService.open() : this.navigatorService.close();
+    childRoutes ? this.navigatorService.getSideNavInstance().open() : this.navigatorService.getSideNavInstance().close();
   }
 
   @HostListener('mouseleave')
   onMouseLeave() {
-    this.navigatorService.close();
+    this.navigatorService.getSideNavInstance().close();
   }
 
   @HostListener('click')
   onMouseClick() {
     this.navigated.emit(this.routes[this.routeIndex].path);
-    this.navigatorService.close();
+    this.navigatorService.getSideNavInstance().close();
   }
 
   constructor(

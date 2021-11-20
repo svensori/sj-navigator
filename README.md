@@ -1,10 +1,10 @@
-# sj-navigator
-Easy side nav creation in angular
+# ng-ez-sidenav
+Easy side nav creation in angular that is based on material side nav.
 
 ## Usage 
 1. Install sj-navigator by running the command:
 ```sh
-npm i sj-navigator
+npm i ng-ez-sidenav
 ```
 2. Import NavigatorModule from sj-navigator.
 ```typescript
@@ -49,16 +49,16 @@ const initializer = (navService: NavigatorService) => () => navService.init(rout
 ```
 5. Wrap your app in the sj-navigator selector.
 ```html
-<sj-nav (navigated)="navigate($event)">
+<ez-nav (navigated)="navigate($event)">
   <router-outlet></router-outlet>
-</sj-nav>
+</ez-nav>
 ```
 Voila!, you have made an instant side navigation in your application.
 
 <br />
 
 ## Have a different style to the navigation?
-You can style the navigation your global css file.
+You can style the navigation in your global css file
 
 <br/>
 

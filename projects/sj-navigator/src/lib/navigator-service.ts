@@ -34,14 +34,7 @@ export class NavigatorService {
     this._childRoutes.next(childRoutes);
   }
 
-  /**
-   * Mat Side Nav Exposed APIs
-   */
-  open() {
-    this._sideNav.open();
-  }
-
-  close() {
-    this._sideNav.close();
+  getSideNavInstance(): MatSidenav {
+    return this._sideNav;
   }
 }

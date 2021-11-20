@@ -4,7 +4,7 @@ import { NavigatorService } from './navigator-service';
 import { RoutingModel } from './navigator-types';
 
 @Component({
-  selector: 'sj-nav',
+  selector: 'ez-nav',
   templateUrl: './navigator.html',
   styleUrls: ['./navigator.scss']
 })

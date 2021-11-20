@@ -1,9 +1,9 @@
-<ul class="main-routes">
+<ul class="ez-main-nav">
   <li *ngFor="let route of (routes | async); index as i"
     [routerLink]="route.path"
     routerLinkActive="active"
     navigatorParentItem
-    [routeIndex]="i" 
+    [routeIndex]="i"
     (navigated)="navigate($event)"
     matRipple>
     {{route.name}}

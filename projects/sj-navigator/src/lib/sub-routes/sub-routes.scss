@@ -1,16 +1,12 @@
-.list-size {
-  height: auto;
-  width: auto;
-  font-size: 14px;
-}
-
-ul.sub-routes {
+ul.ez-sub-nav {
   list-style: none;
   margin: 0;
   padding: 0;
 
   li {
-    @extend .list-size;
+    height: auto;
+    width: auto;
+    font-size: 14px;
     cursor: pointer;
     margin: 0;
     display: flex;
